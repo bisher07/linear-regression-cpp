@@ -15,12 +15,12 @@ class DataSet
 public:
     void load(const std::string &filename);
 
-    int size()
+    int size() const
     {
         return points.size();
     }
 
-    DataPoint getPoint(int index)
+    DataPoint getPoint(int index) const
     {
         return points[index];
     }
@@ -34,12 +34,10 @@ class LinearRegression
 public:
     LinearRegression(double rate = 0.01) : learningRate(rate), m(0), b(0) {}
 
-    void train();
+    void train(const DataSet &data);
 
     double predict(double x);
 
 private:
     double learningRate, m, b;
-
-    DataSet data;
 };
