@@ -5,9 +5,9 @@
 
 struct DataPoint
 {
-    float hours = 0;
+    double hours = 0;
 
-    float grade = 0;
+    double grade = 0;
 };
 
 class DataSet
@@ -22,4 +22,19 @@ public:
 
 private:
     std::vector<DataPoint> points;
+};
+
+class LinearRegression
+{
+public:
+    LinearRegression(double rate = 0.01) : learningRate(rate), m(0), b(0) {}
+
+    void train();
+
+    double predict(double x);
+
+private:
+    double learningRate, m, b;
+
+    DataSet data;
 };
