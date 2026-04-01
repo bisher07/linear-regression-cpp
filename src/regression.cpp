@@ -57,7 +57,11 @@ void LinearRegression::train(const DataSet &data)
         }
     }
 
-    std::cout << "Iteration 1000:\t" << "Loss: " << loss << std::endl;
+    std::cout << "Iteration 1000:\t" << "Loss: " << loss << std::endl
+              << std::endl;
+
+    std::cout << "slope (m):\t" << m << std::endl;
+    std::cout << "Intercept (b):\t" << b << std::endl;
 }
 
 double LinearRegression::predict(double x)
