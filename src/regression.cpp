@@ -30,7 +30,7 @@ void LinearRegression::train(const DataSet &data)
 {
     double gradient_m, gradient_b, loss, predicted;
 
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 5000; i++)
     {
         loss = 0;
         gradient_m = 0;
@@ -57,7 +57,7 @@ void LinearRegression::train(const DataSet &data)
         }
     }
 
-    std::cout << "Iteration 1000:\t" << "Loss: " << loss << std::endl
+    std::cout << "Iteration 5000:\t" << "Loss: " << loss << std::endl
               << std::endl;
 
     std::cout << "slope (m):\t" << m << std::endl;
