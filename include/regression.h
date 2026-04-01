@@ -20,6 +20,11 @@ public:
         return points.size();
     }
 
+    DataPoint getPoint(int index)
+    {
+        return points[index];
+    }
+
 private:
     std::vector<DataPoint> points;
 };
